@@ -26,6 +26,11 @@ const Methods = resolve => {
     resolve(require('@/components/Methods'))
   })
 }
+const Conditional = resolve => {
+  require.ensure(['@/components/Conditional'], () => {
+    resolve(require('@/components/Conditional'))
+  })
+}
 
 Vue.use(Router)
 
@@ -60,6 +65,14 @@ export default new Router({
       name: 'methods',
       components: {
         default: Methods,
+        MainTitle
+      }
+    },
+    {
+      path: '/conditions',
+      name: 'conditional',
+      components: {
+        default: Conditional,
         MainTitle
       }
     }

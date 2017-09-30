@@ -61,13 +61,13 @@ export default {
           }
         },
         {
-          title: 'another workshop',
+          title: 'Conditional Rendering',
           description: 'Description',
           img: {
-            name: 'awesome'
+            name: 'conditional'
           },
           route: {
-            name: ''
+            name: 'conditional'
           }
         }
       ],
@@ -107,6 +107,8 @@ export default {
       background-image: url('~assets/dataBinding.png') ;
     }&.events{
       background-image: url('~assets/events.png') ;
+    }&.conditional{
+      background-image: url('https://www.webdevelopersnotes.com/wp-content/uploads/javascript-if-else-statement.png') ;
     }
   }
 }
