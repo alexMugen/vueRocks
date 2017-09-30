@@ -4,10 +4,10 @@
     <md-layout md-align="center">
       <md-button class="md-primary md-primary md-raised" @click="loadImage">Random image</md-button>
       <md-button class="md-primary md-accent md-raised" @click="clearImage">Clear</md-button>
-      <div>
-        <md-image :md-src="src"></md-image>
-      </div>
     </md-layout>
+    <div>
+      <md-image :md-src="src"></md-image>
+    </div>
 
 
   </section>
@@ -25,7 +25,7 @@
         images: [
           'https://cdn-images-1.medium.com/max/1200/1*GRM7VUZFA-y4cR4gFPB_lA.jpeg',
           'https://reactjs.org/logo-og.png',
-          'http://www.pic.digital/images/angularjs-pourquoi-developper.jpg'
+          'http://fourcast.io/wp-content/uploads/2016/10/angular.png'
         ]
       }
     },
@@ -42,3 +42,10 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+</style>
