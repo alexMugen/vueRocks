@@ -16,6 +16,11 @@ const Hello = resolve => {
     resolve(require('@/components/HelloWorld'))
   })
 }
+const DataBinding = resolve => {
+  require.ensure(['@/components/DataBinding'], () => {
+    resolve(require('@/components/DataBinding'))
+  })
+}
 
 Vue.use(Router)
 
@@ -34,6 +39,14 @@ export default new Router({
       name: 'hello-world',
       components: {
         default: Hello,
+        MainTitle
+      }
+    },
+    {
+      path: '/data-binding',
+      name: 'dataBinding',
+      components: {
+        default: DataBinding,
         MainTitle
       }
     }

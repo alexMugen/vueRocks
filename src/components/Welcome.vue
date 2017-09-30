@@ -41,13 +41,13 @@ export default {
           }
         },
         {
-          title: 'another workshop',
+          title: '2way data binding',
           description: 'Description',
           img: {
-            name: 'awesome'
+            name: 'dataBinding'
           },
           route: {
-            name: ''
+            name: 'dataBinding'
           }
         },
         {
@@ -103,6 +103,8 @@ export default {
     }
     &.awesome{
       background-image: url('~assets/awesome.png') ;
+    }&.dataBinding{
+      background-image: url('~assets/dataBinding.png') ;
     }
   }
 }
