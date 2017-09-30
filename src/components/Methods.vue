@@ -1,14 +1,29 @@
 <template>
   <section id="data-binding">
     <header-app :infoHeader="infoHeader"></header-app>
+    <p class="md-display-1">v-on:click</p>
     <md-layout md-align="center">
-      <md-button class="md-primary md-primary md-raised" @click="loadImage">Random image</md-button>
-      <md-button class="md-primary md-accent md-raised" @click="clearImage">Clear</md-button>
+      <md-button class="md-primary md-primary md-raised" @click.native="loadImage">Random image</md-button>
+      <md-button class="md-primary md-accent md-raised" @click.native="clearImage">Clear</md-button>
     </md-layout>
     <div>
       <md-image :md-src="src"></md-image>
     </div>
 
+    <p class="md-display-1">Key modifiers</p>
+    <md-layout md-align="center">
+      <md-input-container>
+        <label>HIT ENTER AND SAY HELLO</label>
+        <md-input @keyup.enter.native="dialog('Enter : HELLO')"></md-input>
+      </md-input-container>
+    </md-layout>
+
+    <md-layout md-align="center">
+    <md-input-container>
+      <label>HIT ESCAPE AND SAY ADIOS</label>
+      <md-input @keyup.esc.native="dialog('Escape: ADIOS')"></md-input>
+    </md-input-container>
+    </md-layout>
 
   </section>
 </template>
@@ -35,6 +50,9 @@
       },
       clearImage () {
         this.src = null
+      },
+      dialog (msg) {
+        alert(msg)
       }
     },
     components: {
@@ -47,5 +65,11 @@
   div {
     display: flex;
     justify-content: center;
+  }
+  p{
+    text-align: center;
+  }
+  .md-input-container {
+    width: 50%;
   }
 </style>
