@@ -2,7 +2,6 @@
   <section id="hello-world">
     <header-app :infoHeader="infoHeader"></header-app>
     <p class="md-display-1">{{msg}}</p>
-
   </section>
 </template>
 <script>
