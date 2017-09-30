@@ -1,7 +1,7 @@
 <template>
   <section id="hello-world">
     <header-app :infoHeader="infoHeader"></header-app>
-    Hello
+    <p class="md-display-1">{{msg}}</p>
 
   </section>
 </template>
@@ -13,7 +13,8 @@
         infoHeader: {
           title: 'Hello Word',
           subtitle: ''
-        }
+        },
+        msg: 'This is my first hello world in VueJs'
       }
     },
     components: {
@@ -21,3 +22,8 @@
     }
   }
 </script>
+<style scoped>
+  p{
+    text-align: center;
+  }
+</style>

@@ -1,6 +1,5 @@
 <template>
   <section id="main-title">
-    <img src="~assets/awesome.png" alt="toto">
     <hr>
       <h1 class="md-display-3">{{infoHeader.title}}</h1>
     <hr>
