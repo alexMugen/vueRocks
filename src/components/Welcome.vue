@@ -1,22 +1,21 @@
 <template>
   <section id="welcome">
-    <hr>
-    <h1 class="md-display-3">WELCOME TO THE NEW WORLD <strong>FED</strong></h1><hr>
-    <p class="md-display-1 title">Choose a workshop :</p>
     <md-layout md-align="center">
+      <header-app :infoHeader="infoHeader"></header-app>
+      <md-card md-with-hover v-for="(workshop, index) in workshops " :key="index" >
+       <!-- <router-link :to="{name: workshop.route.name}" tag="div">-->
+          <md-card-media>
+            <div :class="workshop.img.name" class="media"></div>
+          </md-card-media>
 
-      <md-card md-with-hover v-for="(workshop, index) in workshops " :key="index">
-        <md-card-media>
-          <div :class="workshop.img.name" class="media"></div>
-        </md-card-media>
+          <md-card-header>
+            <div class="md-title">{{workshop.title}}</div>
+          </md-card-header>
 
-        <md-card-header>
-          <div class="md-title">{{workshop.title}}</div>
-        </md-card-header>
-
-        <md-card-content>
-          {{workshop.description}}
-        </md-card-content>
+          <md-card-content>
+            {{workshop.description}}
+          </md-card-content>
+      <!--  </router-link>-->
       </md-card>
     </md-layout>
 
@@ -24,6 +23,7 @@
 </template>
 
 <script>
+import HeaderApp from '@/components/MainTitle'
 export default {
   name: 'hello',
   data () {
@@ -34,6 +34,9 @@ export default {
           description: 'Description',
           img: {
             name: 'hello'
+          },
+          route: {
+            name: 'hello-world'
           }
         },
         {
@@ -41,6 +44,9 @@ export default {
           description: 'Description',
           img: {
             name: 'awesome'
+          },
+          route: {
+            name: ''
           }
         },
         {
@@ -48,6 +54,9 @@ export default {
           description: 'Description',
           img: {
             name: 'awesome'
+          },
+          route: {
+            name: ''
           }
         },
         {
@@ -55,20 +64,26 @@ export default {
           description: 'Description',
           img: {
             name: 'awesome'
+          },
+          route: {
+            name: ''
           }
         }
-      ]
+      ],
+      infoHeader: {
+        title: 'WELCOME TO THE NEW WORLD FED',
+        subtitle: 'Choose a workshop :'
+      }
     }
+  },
+  components: {
+    HeaderApp
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-h1{
-  text-align: center;
-  color: #2c3e50!important;
-}
 .title {
   text-align: center;
 }
@@ -81,13 +96,12 @@ h1{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     &.hello{
-      background: url('../assets/hello.png') ;
-      background-size: cover;
+      background-image: url('~assets/hello.png') ;
     }
     &.awesome{
-      background: url('../assets/awesome.png') ;
-      background-size: cover;
+      background-image: url('~assets/awesome.png') ;
     }
   }
 }

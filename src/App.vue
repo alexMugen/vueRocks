@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="md-container">
-    <img src="./assets/awesome.png">
     <transition><router-view></router-view></transition>
   </div>
 </template>
