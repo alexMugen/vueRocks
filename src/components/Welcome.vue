@@ -16,7 +16,7 @@
           <md-card-content>
             {{workshop.description}}
           </md-card-content>
-      <</router-link>
+      </router-link>
       </md-card>
     </md-layout>
 
