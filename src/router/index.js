@@ -21,6 +21,11 @@ const DataBinding = resolve => {
     resolve(require('@/components/DataBinding'))
   })
 }
+const Methods = resolve => {
+  require.ensure(['@/components/Methods'], () => {
+    resolve(require('@/components/Methods'))
+  })
+}
 
 Vue.use(Router)
 
@@ -47,6 +52,14 @@ export default new Router({
       name: 'dataBinding',
       components: {
         default: DataBinding,
+        MainTitle
+      }
+    },
+    {
+      path: '/methods',
+      name: 'methods',
+      components: {
+        default: Methods,
         MainTitle
       }
     }

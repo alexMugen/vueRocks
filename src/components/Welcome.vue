@@ -51,13 +51,13 @@ export default {
           }
         },
         {
-          title: 'another workshop',
+          title: 'Methods and Events',
           description: 'Description',
           img: {
-            name: 'awesome'
+            name: 'events'
           },
           route: {
-            name: ''
+            name: 'methods'
           }
         },
         {
@@ -105,6 +105,8 @@ export default {
       background-image: url('~assets/awesome.png') ;
     }&.dataBinding{
       background-image: url('~assets/dataBinding.png') ;
+    }&.events{
+      background-image: url('~assets/events.png') ;
     }
   }
 }
