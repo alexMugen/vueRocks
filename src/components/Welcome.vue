@@ -1,5 +1,6 @@
 <template>
   <section id="welcome">
+    <img src="~assets/awesome.png" alt="toto">
     <md-layout md-align="center">
       <header-app :infoHeader="infoHeader"></header-app>
       <md-card md-with-hover v-for="(workshop, index) in workshops " :key="index" >

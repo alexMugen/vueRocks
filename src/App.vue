@@ -10,10 +10,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   color: #2c3e50;
   margin-bottom: 60px;
+
+  section{
+    width: 100%;
+  }
 }
 .v-enter-active, .v-leave-active {
    transition: all .3s;
