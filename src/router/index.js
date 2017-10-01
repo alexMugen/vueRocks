@@ -32,6 +32,12 @@ const Conditional = resolve => {
   })
 }
 
+const Loop = resolve => {
+  require.ensure(['@/components/Loop'], () => {
+    resolve(require('@/components/Loop'))
+  })
+}
+
 Vue.use(Router)
 
 export default new Router({
@@ -73,6 +79,14 @@ export default new Router({
       name: 'conditional',
       components: {
         default: Conditional,
+        MainTitle
+      }
+    },
+    {
+      path: '/loop',
+      name: 'Loop',
+      components: {
+        default: Loop,
         MainTitle
       }
     }
