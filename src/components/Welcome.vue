@@ -69,6 +69,16 @@ export default {
           route: {
             name: 'conditional'
           }
+        },
+        {
+          title: 'Loop',
+          description: 'Description',
+          img: {
+            name: 'loop'
+          },
+          route: {
+            name: 'Loop'
+          }
         }
       ],
       infoHeader: {
@@ -109,6 +119,9 @@ export default {
       background-image: url('~assets/events.png') ;
     }&.conditional{
       background-image: url('https://www.webdevelopersnotes.com/wp-content/uploads/javascript-if-else-statement.png') ;
+    }
+    &.loop{
+      background-image: url('http://loop-hub.co.uk/wp-content/uploads/2016/09/loop-website.png') ;
     }
   }
 }
