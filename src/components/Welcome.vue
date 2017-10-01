@@ -4,7 +4,7 @@
     <md-layout md-align="center">
       <header-app :infoHeader="infoHeader"></header-app>
       <md-card md-with-hover v-for="(workshop, index) in workshops " :key="index" >
-       <!-- <router-link :to="{name: workshop.route.name}" tag="div">-->
+       <router-link :to="{name: workshop.route.name}" tag="div">
           <md-card-media>
             <div :class="workshop.img.name" class="media"></div>
           </md-card-media>
@@ -16,7 +16,7 @@
           <md-card-content>
             {{workshop.description}}
           </md-card-content>
-      <!--  </router-link>-->
+      </router-link>
       </md-card>
     </md-layout>
 
